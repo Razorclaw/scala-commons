@@ -35,7 +35,8 @@ class SegmentTree[T: Manifest](a: IndexedSeq[T], f: (T, T) => T) {
         }
     }
 
-    // TODO: integrate
+    // TODO: integrate update
+    /*
     private def u(n: Int, a: Int, b: Int, i: Int, v: Int) : T = {
         if (a == b) {
             t(n) = t(n) * v
@@ -46,7 +47,7 @@ class SegmentTree[T: Manifest](a: IndexedSeq[T], f: (T, T) => T) {
             t(n) = f(q, o)
         }
         return t(n)
-    }
+    }*/
     
     def query(l: Int, r: Int): T = q(1, 0, a.length - 1, l, r)
 }
